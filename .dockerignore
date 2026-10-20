@@ -1,0 +1,9 @@
+.git
+.claude
+app/
+**/bin/
+**/obj/
+**/datos/
+**/datos-demo/
+**/*.db
+*.md

@@ -1,0 +1,57 @@
+{
+  "expo": {
+    "name": "Dulce Hogar JD",
+    "slug": "dulce-hogar-jd",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "dulcehogar",
+    "userInterfaceStyle": "light",
+    "backgroundColor": "#FFFBF9",
+    "ios": {
+      "icon": "./assets/expo.icon",
+      "bundleIdentifier": "com.dulcehogarjd.app"
+    },
+    "android": {
+      "package": "com.dulcehogarjd.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#F8DDE4",
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "backgroundImage": "./assets/images/android-icon-background.png",
+        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "output": "single",
+      "favicon": "./assets/images/favicon.png",
+      "name": "Dulce Hogar JD",
+      "themeColor": "#FFFBF9",
+      "backgroundColor": "#FFFBF9"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#FFFBF9",
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 76
+        }
+      ],
+      "expo-sharing",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Dulce Hogar JD usa tus fotos para mostrar cómo se ve cada producto.",
+          "cameraPermission": "Dulce Hogar JD usa la cámara para tomarle foto a los productos."
+        }
+      ],
+      "expo-secure-store"
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}

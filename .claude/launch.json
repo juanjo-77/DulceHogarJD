@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "api-demo",
+      "runtimeExecutable": "dotnet",
+      "runtimeArgs": ["run", "--project", "backend/DulceHogar.Api", "--", "--Demo:Seed=true"],
+      "port": 5080
+    },
+    {
+      "name": "app-web",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "app", "run", "web:ci"],
+      "port": 8081
+    }
+  ]
+}

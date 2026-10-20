@@ -1,0 +1,18 @@
+# Render lee este archivo con "New → Blueprint" y crea el servicio solo.
+# Las tres variables marcadas con sync: false te las pide al crearlo (no se guardan en GitHub).
+services:
+  - type: web
+    name: dulce-hogar-api
+    runtime: docker
+    plan: free
+    region: virginia
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/salud
+    autoDeploy: true
+    envVars:
+      - key: ConnectionStrings__Default
+        sync: false
+      - key: Acceso__Pin
+        sync: false
+      - key: Negocio__Telefono
+        sync: false

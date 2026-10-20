@@ -1,0 +1,25 @@
+# .NET
+backend/**/bin/
+backend/**/obj/
+backend/**/wwwroot/*
+!backend/**/wwwroot/.gitkeep
+.vs/
+
+# Datos locales viejos (SQLite) y archivos de base de datos
+backend/**/datos/
+backend/**/datos-demo/
+*.db
+*.db-shm
+*.db-wal
+
+# App (Expo)
+app/node_modules/
+app/.expo/
+app/dist/
+app/android/
+app/ios/
+
+# Secretos y registros: nunca al repositorio
+.env
+.env*.local
+*.log
