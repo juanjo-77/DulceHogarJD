@@ -26,7 +26,7 @@ Mama's_app/
 Así la app funciona en el celular de tu mamá aunque el computador esté apagado.
 
 ### 1. Neon (base de datos)
-1. En [neon.com](https://neon.com) crea un proyecto (región **AWS US East / N. Virginia**, cerca de Render).
+1. En [neon.com](https://neon.com) crea un proyecto. La región de Render en `render.yaml` debe ser la misma (hoy: Neon `us-east-2` → Render `ohio`).
 2. En **Connect**, desactiva **Connection pooling** y copia la cadena (la que **no** dice `-pooler`). Se ve así:
    `postgresql://usuario:clave@ep-xxx.us-east-1.aws.neon.tech/neondb?sslmode=require`
 3. No hace falta crear tablas: el backend las crea solo al arrancar.
