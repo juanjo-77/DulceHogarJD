@@ -18,6 +18,7 @@ app/.expo/
 app/dist/
 app/android/
 app/ios/
+*.apk
 
 # Secretos y registros: nunca al repositorio
 .env

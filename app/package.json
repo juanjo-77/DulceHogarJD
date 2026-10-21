@@ -52,6 +52,7 @@
     "web": "expo start --web",
     "web:ci": "set CI=1&& expo start --web --port 8081",
     "typecheck": "tsc --noEmit",
+    "apk": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/compilar-apk.ps1",
     "lint": "expo lint"
   },
   "private": true

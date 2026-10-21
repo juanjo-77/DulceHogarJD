@@ -48,14 +48,19 @@ Sube la carpeta `Mama's_app` a un repositorio **privado**. El `.gitignore` ya de
 > En el plan gratis Render "se duerme" tras 15 minutos sin uso: la primera vez del día la app muestra *"Abriendo tu negocio…"* y puede tardar hasta un minuto.
 
 ### 4. La app (APK)
-1. En `app/eas.json`, cambia `https://TU-SERVICIO.onrender.com` por la dirección de Render.
-2. Crea una cuenta en [expo.dev](https://expo.dev) y, desde la carpeta `app`:
+La dirección del servidor está en `app/.env.production` (y en `app/eas.json` para EAS): hoy `https://dulcehogarjd.onrender.com`.
+
+**En este computador** (Android Studio / SDK instalados), desde la carpeta `app`:
 
 ```bash
-npx eas-cli@latest build -p android --profile preview
+npm run apk
 ```
 
-3. Al terminar te da un enlace: ábrelo en el celular de tu mamá e instala el APK. La primera vez pide el PIN.
+El script `app/scripts/compilar-apk.ps1` copia la app a `C:\dh` (sin espacios ni tildes, que rompen las herramientas de Android), genera el proyecto Android desde `app.json`, compila solo para `arm64-v8a` y deja el resultado en **`Mama's_app\DulceHogarJD.apk`**. La primera vez tarda bastante; las siguientes, menos. `C:\dh` se puede borrar cuando quieras (se vuelve a crear).
+
+**O en la nube con EAS** (sin Android Studio): `npx eas-cli@latest build -p android --profile preview`.
+
+Para instalarlo: pasa el `.apk` al celular de tu mamá (WhatsApp, cable o Drive), ábrelo y permite "instalar apps de esta fuente". La primera vez pide el PIN. Para actualizarla, se instala el APK nuevo encima: los datos viven en Neon, no en el celular.
 
 ## PIN y WhatsApp del negocio
 - **PIN** (`Acceso__Pin`, de 4 a 8 números; vacío = sin PIN): se pide una vez por celular y queda guardado cifrado. Tras 8 intentos fallidos esa conexión se bloquea un minuto. Para cambiarlo, cambia la variable en Render; la app lo pedirá de nuevo.
